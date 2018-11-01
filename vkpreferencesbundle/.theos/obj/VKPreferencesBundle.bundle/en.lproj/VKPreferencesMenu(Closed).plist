@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>headerCellClass</key>
+			<string>VKPreferencesLogo</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Settings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>ru.anonz.vkpreferencesbundle</string>
+			<key>key</key>
+			<string>sOffline</string>
+			<key>label</key>
+			<string>Enable offline</string>
+			<key>PostNotification</key>
+			<string>ru.anonz.vkpreferencesbundle.post</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
+			<key>get</key>
+			<string>getPreferenceValue:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>ru.anonz.vkpreferencesbundle</string>
+			<key>key</key>
+			<string>sDontRead</string>
+			<key>label</key>
+			<string>Don&apos;t mark messages as read</string>
+			<key>PostNotification</key>
+			<string>ru.anonz.vkpreferencesbundle.post</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
+			<key>get</key>
+			<string>getPreferenceValue:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>ru.anonz.vkpreferencesbundle</string>
+			<key>key</key>
+			<string>sHideTyping</string>
+			<key>label</key>
+			<string>Hide &quot;Typing...&quot;</string>
+			<key>PostNotification</key>
+			<string>ru.anonz.vkpreferencesbundle.post</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
+			<key>get</key>
+			<string>getPreferenceValue:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>ru.anonz.vkpreferencesbundle</string>
+			<key>key</key>
+			<string>sAdultOff</string>
+			<key>label</key>
+			<string>Disable adult</string>
+			<key>PostNotification</key>
+			<string>ru.anonz.vkpreferencesbundle.post</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
+			<key>get</key>
+			<string>getPreferenceValue:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Feedback</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>linkGR</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Community in VK</string>
+			<key>icon</key>
+			<string>/Library/Application Support/VKPIcons/CommVK.png</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>linkD</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Donate</string>
+			<key>icon</key>
+			<string>/Library/Application Support/VKPIcons/Donate.png</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>© Alexander &lt;Anonym0uz&gt; Orlov. OneScript. 2015</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSTitleValueCell</string>
+			<key>label</key>
+			<string>Version</string>
+			<key>get</key>
+			<string>valueForSpecifierVersion:</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>VK Preferences</string>
+</dict>
+</plist>

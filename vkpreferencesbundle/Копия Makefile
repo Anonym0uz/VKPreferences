@@ -1,0 +1,18 @@
+export ARCHS = armv7 arm64
+TARGET_IPHONEOS_DEPLOYMENT_VERSION=7.0
+include theos/makefiles/common.mk
+
+BUNDLE_NAME = VKPreferencesBundle
+VKPreferencesBundle_FILES = VKPreferencesBundle.mm VKMenu.mm VKAccounts.mm UIAlertView+Blocks.m ColorSwitch.m UITableView+LongPressReorder/UITableView+LongPressReorder.m Passcode/FBEncryptorAES.m Passcode/NSData+Base64.m Passcode/BKPasscodeField.m Passcode/BKPasscodeInputView.m Passcode/BKPasscodeViewController.m Passcode/AFViewShaker.m Passcode/BKShiftingView.m VKPrefsPasscode.mm Passcode/BKPasscodeLockScreenManager.m Passcode/BKPasscodeDummyViewController.m Passcode/BKTouchIDSwitchView.m Passcode/BKTouchIDManager.m \
+$(shell find PasscodeNew -name '*.m')
+VKPreferencesBundle_INSTALL_PATH = /Library/PreferenceBundles
+VKPreferencesBundle_FRAMEWORKS = UIKit CoreGraphics QuartzCore Foundation Security LocalAuthentication AudioToolbox
+VKPreferencesBundle_PRIVATE_FRAMEWORKS = Preferences Security
+ADDITIONAL_OBJCFLAGS = -Wno-error
+//VKPreferencesBundle_CFLAGS = -fno-objc-arc
+
+include $(THEOS_MAKE_PATH)/bundle.mk
+
+internal-stage::
+	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)
+	$(ECHO_NOTHING)cp entry.plist $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences/VKPreferencesBundle.plist$(ECHO_END)

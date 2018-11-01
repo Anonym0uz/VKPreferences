@@ -1,0 +1,11 @@
+{
+	entry = {
+		bundle = VKPreferencesBundle;
+		cell = PSLinkCell;
+		detail = "VKPreferencesBundleListController";
+		icon = "/Library/Application Support/VKPIcons/VKPreferencesMenu.png";
+		isController = 1;
+		label = VKPreferences;
+		id = "VKPREFERENCES_ID";
+	};
+}

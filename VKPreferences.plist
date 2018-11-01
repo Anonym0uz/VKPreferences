@@ -1,0 +1,11 @@
+{
+	Filter = {
+		Bundles = (
+			"com.vk.vkhd",
+		);
+		Executables = (
+			VkHdAppstore,
+		);
+		Mode = Any;
+	};
+}

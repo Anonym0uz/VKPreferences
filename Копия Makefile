@@ -1,0 +1,21 @@
+ARCHS = armv7 arm64
+TARGET_IPHONEOS_DEPLOYMENT_VERSION=7.0
+//export THEOS_DEVICE_IP=192.168.0.103
+export THEOS_DEVICE_IP=192.168.0.105
+include theos/makefiles/common.mk
+GO_EASY_ON_ME = 1
+export SDKVERSION=9.3
+
+TWEAK_NAME = VKPreferences
+VKPreferences_FILES = Tweak.xm VKPreferences.m F0xAuthenticator.m UIAlertView+Sheet/UIAlertView+Blocks.m VersionComparator/VersionComparator.m UITableView+LongPressReorder/UITableView+LongPressReorder.m FBEncrypt/FBEncryptorAES.m FBEncrypt/NSData+Base64.m TDBadge/TDBadgedCell.m Passcode/BKPasscodeField.m Passcode/BKPasscodeInputView.m Passcode/BKPasscodeViewController.m Passcode/AFViewShaker.m Passcode/BKShiftingView.m Passcode/BKPasscodeLockScreenManager.m Passcode/BKPasscodeDummyViewController.m Passcode/BKTouchIDSwitchView.m Passcode/BKTouchIDManager.m VKPrefsPasscode.mm vkpreferencesbundle/VKPreferencesBundle.mm vkpreferencesbundle/VKAccounts.mm vkpreferencesbundle/VKMenu.mm VKPreferencesMenu.m PasscodeNew/DMKeychain.m PasscodeNew/DMPasscode.m PasscodeNew/DMPasscodeConfig.m PasscodeNew/DMPasscodeInternalField.m PasscodeNew/DMPasscodeInternalNavigationController.m PasscodeNew/DMPasscodeInternalViewController.m LTHPasscodeViewController/LTHKeychainUtils.m LTHPasscodeViewController/LTHPasscodeViewController.m 
+VKPreferences_FRAMEWORKS = UIKit CoreGraphics QuartzCore Foundation Security LocalAuthentication AudioToolbox
+VKPreferences_PRIVATE_FRAMEWORKS = Preferences Foundation Security
+ADDITIONAL_OBJCFLAGS = -Wno-error
+VKPreferences_LDFLAGS + = -Wl -segalign 4000
+
+include $(THEOS_MAKE_PATH)/tweak.mk
+
+after-install::
+	install.exec "killall -9 VkHdAppstore"
+SUBPROJECTS += vkpreferencesbundle
+include $(THEOS_MAKE_PATH)/aggregate.mk
